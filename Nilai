@@ -1,0 +1,60 @@
+public class Nilai {
+    private double uts;
+    private double kuis;
+    private double nilaiTotal;
+    private double tugas;
+    
+    public Nilai(double tugas, double uas, double uts, double kuis){
+        this.tugas = tugas;
+        this.uas = uas;
+        this.uts = uts;
+        this.kuis = kuis;
+    }
+
+    public double getTugas() {
+        return tugas;
+    }
+
+    public double getUas() {
+        return uas;
+    }
+
+    public double getUts() {
+        return uts;
+    }
+
+    public double getKuis() {
+        return kuis;
+    }
+
+    public double getNilaiTotal() {
+        return nilaiTotal;
+    }
+    private double uas;
+
+    public void setTugas(double tugas) {
+        this.tugas = tugas;
+    }
+
+    public void setUas(double uas) {
+        this.uas = uas;
+    }
+
+    public void setUts(double uts) {
+        this.uts = uts;
+    }
+
+    public void setKuis(double kuis) {
+        this.kuis = kuis;
+    }
+
+    public void setNilaiTotal(double nilaiTotal) {
+        this.nilaiTotal = hitungTotal();
+    }
+
+    public double hitungTotal(){
+        return((this.uas*30/100)+(this.uts*30/100)+(this.tugas*15/100)+(this.kuis*25/100));
+    }
+    
+    public Nilai(){}
+}
